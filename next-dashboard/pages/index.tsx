@@ -1,16 +1,26 @@
 import Head from 'next/head';
+import { Leaderboard } from '../components/Leaderboard';
+import { LoyaltyPanel } from '../components/LoyaltyPanel';
 import { OverviewCards } from '../components/OverviewCards';
 import { Section } from '../components/Section';
-import { vehicles, withdrawals } from '../data/mockData';
+import { TrendBar } from '../components/TrendBar';
+import { topRoutes, vehicles, withdrawals } from '../data/mockData';
 
 export default function DashboardPage() {
   return (
     <>
       <Head>
-        <title>Lipa Fare | Dashboard</title>
+        <title>FEEA | Operations dashboard</title>
       </Head>
-      <h1 style={{ marginTop: 0 }}>Dashboard overview</h1>
       <OverviewCards />
+
+      <div className="grid-2">
+        <TrendBar />
+        <div className="stack">
+          <LoyaltyPanel />
+          <Leaderboard />
+        </div>
+      </div>
 
       <Section title="Live vehicles" cta={<a className="button secondary" href="/vehicles">View all</a>} />
       <table className="table">
@@ -35,6 +45,17 @@ export default function DashboardPage() {
           ))}
         </tbody>
       </table>
+
+      <Section title="Route performance" />
+      <div className="card-grid">
+        {topRoutes.map((route) => (
+          <div className="card" key={route.route}>
+            <div className="label-strong">{route.route}</div>
+            <div className="value">{route.revenue}</div>
+            <div className="muted">{route.trips} trips</div>
+          </div>
+        ))}
+      </div>
 
       <Section title="SACCO admin controls" />
       <div className="card-grid">

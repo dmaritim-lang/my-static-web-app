@@ -5,10 +5,38 @@ export const summaryCards = [
   { label: 'Pending withdrawals', value: 'KSh 183,000', hint: '12 requests' },
 ];
 
+export const fareTrends = [
+  { label: 'Mon', value: 18 },
+  { label: 'Tue', value: 22 },
+  { label: 'Wed', value: 20 },
+  { label: 'Thu', value: 24 },
+  { label: 'Fri', value: 27 },
+  { label: 'Sat', value: 30 },
+  { label: 'Sun', value: 16 },
+];
+
+export const topRoutes = [
+  { route: 'CBD ↔ Rongai', revenue: 'KSh 412,000', trips: 118 },
+  { route: 'CBD ↔ Thika', revenue: 'KSh 367,500', trips: 102 },
+  { route: 'CBD ↔ Ngong', revenue: 'KSh 298,200', trips: 90 },
+];
+
+export const loyaltyStats = {
+  earnedToday: 6420,
+  redeemedToday: 1120,
+  members: 12800,
+};
+
 export const vehicles = [
   { plate: 'KBA 123A', route: 'CBD ↔ Rongai', fare: '80', status: 'Active', driver: 'Jane Mwangi' },
   { plate: 'KCE 456B', route: 'CBD ↔ Thika', fare: '120', status: 'Active', driver: 'Peter Kamau' },
   { plate: 'KCX 789C', route: 'CBD ↔ Ngong', fare: '100', status: 'On break', driver: 'Ali Said' },
+];
+
+export const vehicleLeaders = [
+  { plate: 'KCE 456B', amount: 'KSh 82,000', change: '+18%' },
+  { plate: 'KBA 123A', amount: 'KSh 78,300', change: '+10%' },
+  { plate: 'KCX 789C', amount: 'KSh 65,900', change: '+6%' },
 ];
 
 export const walletBalances = [

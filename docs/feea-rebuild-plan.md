@@ -8,6 +8,7 @@ A concise plan to recreate and perfect the Lipa Fare system under the new name *
 - Ship polished user experiences across mobile, web dashboard, and USSD.
 
 ## Architecture Overview
+- **Channels (all users)**: Mobile app, USSD, and web dashboard are available to every role (passenger, owner, driver, SACCO admin, vendor), with a dedicated system admin console layered on the same web stack for ops/support.
 - **API Gateway**: Single entry with auth, rate limits, request logging.
 - **Services**: Auth & Identity, Vehicle & SACCO registry, Wallet & Ledger, Payments (M-Pesa/B2B/B2C), Loyalty, USSD, Notifications, Reporting/Analytics, Admin/Config.
 - **Data**: PostgreSQL (core), Redis (sessions/cache), Kafka/RabbitMQ (events), S3-compatible storage (reports/exports/logs).
